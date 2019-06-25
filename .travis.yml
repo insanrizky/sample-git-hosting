@@ -1,2 +1,17 @@
 language: node_js
 
+branches:
+  only:
+    - master
+    - develop
+    - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+
+before_script:
+  - echo "Before script running"
+
+script:
+  - echo "Main script running"
+
+after_success:
+  - echo "Success"
+
